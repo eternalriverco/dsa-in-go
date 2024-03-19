@@ -3,8 +3,8 @@ package binarytree
 import "testing"
 
 type Node struct {
-	value       int
-	left, right *Node
+	Value       int
+	Left, Right *Node
 }
 
 type Tree struct {
@@ -24,11 +24,11 @@ func levelOrderBinaryTree(arr []int, start int, size int) *Node {
 	right := 2*start + 2
 
 	if left < size {
-		root.left = levelOrderBinaryTree(arr, left, size)
+		root.Left = levelOrderBinaryTree(arr, left, size)
 	}
 
 	if right < size {
-		root.right = levelOrderBinaryTree(arr, right, size)
+		root.Right = levelOrderBinaryTree(arr, right, size)
 	}
 
 	return root
